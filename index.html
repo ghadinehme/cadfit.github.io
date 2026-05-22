@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CADFit: Precise Mesh-to-CAD Program Generation with Hybrid Optimization.">
+  <meta name="keywords" content="CADFit, CAD, Mesh-to-CAD, CadQuery, ICML 2026, Hybrid Optimization, Reverse Engineering, B-rep">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CADFit: Precise Mesh-to-CAD Program Generation with Hybrid Optimization</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/showcase.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<!-- HERO TITLE -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-1 publication-title">
+        CADFit: Precise Mesh-to-CAD Program Generation with Hybrid Optimization
+      </h1>
+      <h2 class="subtitle is-4">Submitted to ICML 2026</h2>
+
+      <div class="is-size-5 publication-authors">
+        <span class="author-block">
+          <a href="https://www.linkedin.com/in/ghadi-nehme/" target="_blank" rel="noopener noreferrer">
+            Ghadi Nehme
+          </a><sup>1</sup>,
+        </span>
+        <span class="author-block">
+          <a href="https://www.linkedin.com/in/eamon-whalen/" target="_blank" rel="noopener noreferrer">
+            Eamon Whalen
+          </a><sup>2</sup>,
+        </span>
+        <span class="author-block">
+          <a href="https://decode.mit.edu/" target="_blank" rel="noopener noreferrer">
+            Faez Ahmed
+          </a><sup>1</sup>
+        </span>
+      </div>
+
+
+      <div class="is-size-5 publication-authors">
+        <span class="author-block"><sup>1</sup>Massachusetts Institute of Technology &nbsp;&nbsp;</span>
+        <span class="author-block"><sup>2</sup>Siemens Digital Industries Software</span>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="publication-links">
+          <!-- PDF Link. -->
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2605.01171"
+                class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <!-- arXiv -->
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2605.01171" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </span>
+
+          <!-- Code -->
+          <span class="link-block">
+            <a href="https://github.com/ghadinehme/CADFit"
+               class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code</span>
+            </a>
+          </span>
+
+          <!-- Video -->
+          <span class="link-block">
+            <a href="https://www.youtube.com/watch?v=1C6KqY-3Okw"
+                class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                  <i class="fab fa-youtube"></i>
+              </span>
+              <span>Video</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEASER -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <img src="./static/images/showcase.png"
+           style="border-radius:10px; display:block; margin:0 auto 1.5rem auto; width:90%;">
+      <h2 class="subtitle has-text-centered">
+        <strong>CADFit</strong> reconstructs editable CAD construction sequences from watertight meshes —
+        extrusions, revolutions, fillets, chamfers, composed with Boolean union and cut.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ABSTRACT -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite recent progress, recovering <strong>parametric CAD construction
+            sequences</strong> from geometric input — meshes or point clouds — remains
+            a <strong>key challenge for design and manufacturing</strong>. Existing
+            CAD reconstruction and generation methods are largely restricted either to
+            <strong>difficult-to-edit formats</strong> (meshes, B-reps) or to
+            <strong>simple sketch-and-extrude pipelines</strong> on low-complexity datasets.
+          </p>
+          <p>
+            We introduce <strong>CADFit</strong>, a <strong>hybrid optimization-based
+            framework</strong> that recovers <strong>complex, editable CAD construction
+            sequences</strong> from meshes by incrementally fitting and validating
+            parametric operations using geometric feedback. Our approach formulates
+            reconstruction as an <strong>IoU-driven optimization over structured,
+            executable CAD programs</strong>, and supports a <strong>rich operator
+            set</strong> — extrusions, revolutions, fillets, and chamfers — composed
+            with Boolean union and cut.
+          </p>
+          <p>
+            Experiments on multiple CAD benchmarks (DeepCAD, Fusion360 Gallery, ABC) show
+            that CADFit <strong>outperforms state-of-the-art mesh-to-CAD methods</strong>
+            in volumetric IoU and Chamfer Distance, while substantially reducing the
+            <strong>Invalid Ratio</strong> of reconstructed CAD programs — particularly
+            for <strong>complex designs</strong>. We further present a
+            <strong>multimodal pipeline</strong> that enables <strong>end-to-end
+            reconstruction of CAD construction sequences from images</strong> by
+            combining image-based geometry reconstruction with CADFit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Video</h2>
+
+    <div class="publication-video"
+          style="position: relative; padding-bottom: 56.25%; height: 0;">
+      <iframe
+        src="https://www.youtube.com/embed/1C6KqY-3Okw?rel=0&showinfo=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0;
+                width: 100%; height: 100%; border-radius: 8px;">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Pipeline</h2>
+    <img src="./static/images/cadfit_pipeline.png" alt="CADFit pipeline"
+         style="max-width:100%; border-radius:8px; margin-bottom:1rem;">
+    <div class="content has-text-justified">
+      <p>
+        Given a watertight input mesh, CADFit extracts candidate sketch profiles from
+        detected planar face clusters and axis-aligned slicing planes. For each profile
+        it generates a small set of geometrically consistent extrusion and revolve
+        candidates via one-sided Chamfer parameter sweeps. Candidates are then assembled
+        into a compact base program through IoU-guided backward pruning, executed and
+        validated by the CAD kernel at every step. A bounded number of residual
+        reconstruction iterations stitch in finer features via Boolean union and cut,
+        and a final pass recovers fillets and chamfers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Mesh-to-CAD Results</h2>
+    <img src="./static/images/mesh_results.png" alt="Qualitative mesh-to-CAD results"
+         style="max-width:100%; border-radius:8px; margin-bottom:1rem;">
+    <p>
+      Qualitative reconstructions on DeepCAD, Fusion360, and ABC (easy / medium / hard).
+      CADFit produces a valid, editable CAD program on every input where baselines either
+      output <em>Invalid</em> or visibly diverge from the target geometry.
+    </p>
+  </div>
+</section>
+
+
+<!-- MULTIMODAL -->
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Image-to-CAD</h2>
+    <img src="./static/images/photos_to_cad.png" alt="Image-to-CAD"
+         style="max-width:100%; border-radius:8px; margin-bottom:1rem;">
+    <div class="content has-text-justified">
+      <p>
+        CADFit is agnostic to where the mesh comes from. Pairing it with a pretrained
+        image-to-3D model — we use
+        <a href="https://github.com/Tencent-Hunyuan/Hunyuan3D-2" target="_blank" rel="noopener noreferrer">Hunyuan3D</a>
+        — and standard post-processing (watertight enforcement, Taubin smoothing, mesh
+        decimation) gives a fully end-to-end <strong>image-to-CAD</strong> pipeline,
+        with no retraining of CADFit.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CADQUERY EXAMPLE -->
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Example CadQuery Output</h2>
+    <img src="./static/images/cadquery_code.png" alt="CadQuery code"
+         style="max-width:100%; border-radius:8px; margin-bottom:1rem;">
+    <p>
+      Every CADFit run emits an executable CadQuery program that reproduces the solid
+      using sketches, extrusions, revolutions, Boolean composition, and finishing features.
+    </p>
+  </div>
+</section>
+
+
+<!-- BIBTEX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{nehme2026cadfit,
+  title={CADFit: Precise Mesh-to-CAD Program Generation with Hybrid Optimization},
+  author={Nehme, Ghadi and Whalen, Eamon and Ahmed, Faez},
+  journal={arXiv preprint arXiv:2605.01171},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/abs/2605.01171"><i class="fas fa-file-pdf"></i></a>
+      <a class="icon-link" href="https://github.com/ghadinehme/CADFit"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Website adapted from the <a href="https://nerfies.github.io">Nerfies</a> template.
+            © 2026 MIT DeCoDE Lab.
+          </p>
+          <p>
+            Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

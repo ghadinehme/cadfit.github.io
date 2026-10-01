@@ -16,6 +16,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/more-works.css?v=4">
   <link rel="icon" href="./static/images/showcase.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,8 +24,57 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script defer src="./static/js/more-works.js"></script>
 </head>
 <body>
+
+<!-- MORE WORKS -->
+<div class="more-works-container" id="moreWorks">
+  <button class="more-works-btn" id="moreWorksBtn" aria-expanded="false" aria-controls="moreWorksDropdown">
+    <i class="fas fa-flask"></i>
+    More Works
+    <i class="fas fa-chevron-down dropdown-arrow"></i>
+  </button>
+  <div class="more-works-dropdown" id="moreWorksDropdown">
+    <div class="dropdown-header">
+      <h4>More Works</h4>
+      <button class="close-btn" id="moreWorksClose" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="works-list">
+      <a href="https://ghadinehme.com/videocad.github.io/" class="work-item">
+        <div class="work-info">
+          <h5>VideoCAD: A Dataset and Model for Learning Long-Horizon 3D CAD UI Interactions from Video</h5>
+          <p class="work-venue">NeurIPS 2025</p>
+        </div>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+      <a href="https://ghadinehme.com/lamp.github.io/" class="work-item">
+        <div class="work-info">
+          <h5>LAMP: Data-Efficient Linear Affine Weight-Space Models for Parameter-Controlled 3D Shape Generation and Extrapolation</h5>
+          <p class="work-venue">ICML 2026</p>
+        </div>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+      <a href="https://ghadinehme.com/stepcad.github.io/" class="work-item">
+        <div class="work-info">
+          <h5>StepCAD: Mesh-to-CAD Code Generation via LLM Policy and Geometry-Guided Search</h5>
+          <p class="work-venue">NeurIPS 2026</p>
+        </div>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+      <a href="https://ghadinehme.com/publications.html" class="work-item all-pubs">
+        <div class="work-info">
+          <h5>All research papers by Ghadi Nehme</h5>
+          <p class="work-venue">ghadinehme.com/publications</p>
+        </div>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- HERO TITLE -->

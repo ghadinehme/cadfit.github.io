@@ -1,0 +1,32 @@
+/* "More Works" dropdown, shared with the StepCAD page. */
+/* ---------- More Works dropdown (same pattern as CADBench) ---------- */
+.more-works-container { position: fixed; top: 2rem; right: 2rem; z-index: 1000; }
+.more-works-btn { display: inline-flex; align-items: center; gap: .5rem; background: #fff; color: #363636; border: 2px solid #dbdbdb; border-radius: 12px; padding: .75rem 1.25rem; font-weight: 600; font-size: .9rem; box-shadow: 0 4px 12px rgba(0,0,0,.08); cursor: pointer; transition: all .2s ease; font-family: 'Google Sans', sans-serif; }
+.more-works-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.12); background: #fafafa; border-color: #0f9f86; }
+.more-works-btn .dropdown-arrow { font-size: .8rem; transition: transform .2s ease; }
+.more-works-btn[aria-expanded="true"] .dropdown-arrow { transform: rotate(180deg); }
+.more-works-dropdown { position: absolute; top: calc(100% + .5rem); right: 0; width: 400px; max-width: 90vw; max-height: calc(100vh - 7rem); overflow-y: auto; background: #fff; border: 1px solid #dbdbdb; border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,.16); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all .2s ease; }
+.more-works-dropdown.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 1.5rem 1rem; border-bottom: 1px solid #dbdbdb; }
+.dropdown-header h4 { margin: 0; font-size: 1.1rem; font-weight: 700; color: #363636; }
+.close-btn { background: none; border: none; color: #7a7a7a; cursor: pointer; padding: .5rem; border-radius: 8px; transition: all .2s ease; }
+.close-btn:hover { background: #f5f5f5; color: #363636; }
+.works-list { padding: 1rem; }
+.work-item { display: flex; align-items: flex-start; justify-content: space-between; gap: .75rem; padding: 1rem; border-radius: 8px; color: inherit; transition: all .2s ease; margin-bottom: .5rem; }
+.work-item:last-child { margin-bottom: 0; }
+.work-item:hover { background: #f5f5f5; transform: translateX(4px); color: inherit; }
+.work-info h5 { margin: 0 0 .35rem; font-size: 1rem; font-weight: 500; color: #363636; line-height: 1.4; }
+.work-info .work-venue { margin: 0; font-size: .85rem; font-weight: 700; color: #0f9f86; }
+.work-item .svg-inline--fa, .work-item > i { color: #b5b5b5; font-size: .9rem; margin-top: .2rem; flex-shrink: 0; }
+@media screen and (max-width: 768px) {
+  .more-works-container { top: auto; bottom: 2rem; right: 1rem; }
+  .more-works-btn { padding: .6rem 1rem; font-size: .8rem; }
+  .more-works-dropdown { top: auto; bottom: calc(100% + .5rem); right: 0; width: calc(100vw - 2rem); max-height: calc(100vh - 8rem); transform: translateY(10px); }
+}
+
+/* Per-site accent: author names and the More Works dropdown use this site's colour. */
+:root { --site-accent: #c27803; }
+.publication-authors a { color: var(--site-accent) !important; }
+.more-works-btn:hover { border-color: var(--site-accent); }
+.work-info .work-venue { color: var(--site-accent); }
+.work-item.all-pubs .work-venue { color: #7a7a7a; font-weight: 600; }
